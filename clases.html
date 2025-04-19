@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZENFIT CLASES</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Seccion del header -->
+    <header>
+        <nav class="navbar navbar-expand-lg shadow-sm navbar-dark bg-danger">
+          <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-4 mx-3" href="#">ZENFIT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active rounded-3" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown position-static">
+                  <a class="nav-link dropdown-toggle active rounded-3" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Clases
+                  </a>
+                  <div class="dropdown-menu mega-dropdown px-3 border-0 shadow">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <a href="clases.html">
+                          <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                            <div class="icon px-3 bg-secondary-subtle rounded-3 fs-1">
+                              <i class="bi bi-person-walking"></i>
+                            </div>
+                            <div class="text ps-3">
+                              <h5>Nuestras clases</h5>
+                              <div>Informate de las clases mas destacadas que ofrecemos</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-6">
+                        <a href="clases.html#seccion-galeria-id">
+                          <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                            <div class="icon px-3 bg-secondary-subtle  rounded-3 fs-1">
+                              <i class="bi bi-camera"></i>
+                            </div>
+                            <div class="text ps-3">
+                              <h5>Galeria</h5>
+                              <div>Visita nuestra galeria de guia de actividades.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-6">
+                        <a href="clases.html#section-horarios-id">
+                          <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                            <div class="icon px-3 bg-secondary-subtle rounded-3 fs-1">
+                              <i class="bi bi-calendar-date"></i>
+                            </div>
+                            <div class="text ps-3">
+                              <h5>Horarios</h5>
+                              <div>Conoce la tabla de horario de clases</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-6">
+                        <a href="precios.html">
+                          <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                            <div class="icon px-3 bg-secondary-subtle rounded-3 fs-1">
+                              <i class="bi bi-person-arms-up"></i>
+                            </div>
+                            <div class="text ps-3">
+                              <h5>Precios</h5>
+                              <div>Conoce los precios anuales y mensuales.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active rounded-3" href="entrenadores.html">Entrenadores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active rounded-3" href="precios.html">Precios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active rounded-3" href="blog.html">Blog ZENFIT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active rounded-3" href="contacto.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <!-- Seccion de tipos de clases -->
+    <section>
+        <div class="container py-5" id="clases-zenfit">
+            <h2 class="text-center mb-4 fw-bold">NUESTRAS CLASES</h2>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2 gap-md-3 mb-4">
+                <button class="btn btn-outline-danger filter-btn" data-filter="all">Todas</button>
+                <button class="btn btn-outline-danger filter-btn" data-filter="musculacion">Musculación</button>
+                <button class="btn btn-outline-danger filter-btn" data-filter="crossfit">CrossFit</button>
+                <button class="btn btn-outline-danger filter-btn" data-filter="yoga">Yoga</button>
+                <button class="btn btn-outline-danger filter-btn" data-filter="spinning">Spinning</button>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 clase-card" data-clase="musculacion">
+                    <div class="card border-danger shadow text-center p-3 card-zoom">
+                        <i class="bi bi-person-raised-hand fs-1 text-danger"></i>
+                        <h5 class="mt-3 fw-bold">Musculación</h5>
+                        <p>Entrenamiento de fuerza para desarrollar músculo.</p>
+                        <!-- Capa Overlay que aparecerá al hacer hover -->
+                        <div
+                            class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center">
+                            <h5 class="text-white">¡Más Información!</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 clase-card" data-clase="crossfit">
+                    <div class="card border-danger shadow text-center p-3 card-zoom">
+                        <i class="bi bi-lightning-charge fs-1 text-danger"></i>
+                        <h5 class="mt-3 fw-bold">CrossFit</h5>
+                        <p>Ejercicios funcionales de alta intensidad.</p>
+                        <!-- Capa Overlay que aparecerá al hacer hover -->
+                        <div
+                            class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center">
+                            <h5 class="text-white">¡Más Información!</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 clase-card" data-clase="yoga">
+                    <div class="card border-danger shadow text-center p-3 card-zoom">
+                        <i class="bi bi-flower1 fs-1 text-danger"></i>
+                        <h5 class="mt-3 fw-bold">Yoga</h5>
+                        <p>Conexión cuerpo y mente con posturas y respiración.</p>
+                        <!-- Capa Overlay que aparecerá al hacer hover -->
+                        <div
+                            class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center">
+                            <h5 class="text-white">¡Más Información!</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 clase-card" data-clase="spinning">
+                    <div class="card border-danger shadow text-center p-3 card-zoom">
+                        <i class="bi bi-bicycle fs-1 text-danger"></i>
+                        <h5 class="mt-3 fw-bold">Spinning</h5>
+                        <p>Ciclismo indoor para quemar calorías.</p>
+                        <!-- Capa Overlay que aparecerá al hacer hover -->
+                        <div
+                            class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center">
+                            <h5 class="text-white">¡Más Información!</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 clase-card" data-clase="musculacion">
+                    <div class="card border-danger shadow text-center p-3 card-zoom">
+                        <i class="bi bi-person-raised-hand fs-1 text-danger"></i>
+                        <h5 class="mt-3 fw-bold">Máquinas de Musculación</h5>
+                        <p>Entrená con equipamiento moderno.</p>
+                        <!-- Capa Overlay que aparecerá al hacer hover -->
+                        <div
+                            class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center">
+                            <h5 class="text-white">¡Más Información!</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 clase-card" data-clase="musculacion">
+                    <div class="card border-danger shadow text-center p-3 card-zoom">
+                        <i class="bi bi-person-raised-hand fs-1 text-danger"></i>
+                        <h5 class="mt-3 fw-bold">Entrenamiento de Fuerza</h5>
+                        <p>Potenciá tus músculos con rutinas de fuerza.</p>
+                        <!-- Capa Overlay que aparecerá al hacer hover -->
+                        <div
+                            class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center">
+                            <h5 class="text-white">¡Más Información!</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ <!-- Seccion de horarios -->
+    <section id="section-horarios-id">
+        <div class="container py-5">
+          <h2 class="text-center mb-4 fw-bold">HORARIOS</h2>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Clase</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Dias</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-light">
+                  <th scope="row">1</th>
+                  <td>Musculación</td>
+                  <td>8:00 a 10:00</td>
+                  <td>Lunes a Viernes</td>
+                </tr>
+                <tr class="table-danger">
+                  <th scope="row">2</th>
+                  <td>CrossFit</td>
+                  <td>10:00 a 11:30</td>
+                  <td>Miercoles y Jueves</td>
+                </tr>
+                <tr class="table-light">
+                  <th scope="row">3</th>
+                  <td>Yoga</td>
+                  <td>12:00 a 13:00</td>
+                  <td>Lunes a Jueves</td>
+                </tr>
+                <tr class="table-danger">
+                  <th scope="row">4</th>
+                  <td>Spinning</td>
+                  <td>12:00 a 13:00</td>
+                  <td>Jueves y Sabado</td>
+                </tr>
+                <tr class="table-light">
+                  <th scope="row">5</th>
+                  <td>Máquinas de Musculación</td>
+                  <td>15:00 a 17:00</td>
+                  <td>Martes y Viernes</td>
+                </tr>
+                <tr class="table-danger">
+                  <th scope="row">6</th>
+                  <td>Entrenamiento de Fuerza</td>
+                  <td>17:30 a 18:30</td>
+                  <td>Lunes y Viernes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </section>
+      
+
+ <!-- Seccion de galeria -->
+ <section id="seccion-galeria-id" class="galeria-section">
+    <h2 class="text-center fw-bold">GALERIA DE CLASES</h2>
+  
+    <!-- Filtros -->
+    <input type="radio" name="filtro" id="todo" checked>
+    <input type="radio" name="filtro" id="musculacion">
+    <input type="radio" name="filtro" id="crossfit">
+    <input type="radio" name="filtro" id="yoga">
+    <input type="radio" name="filtro" id="spinning">
+  
+    <div class="filtros d-flex flex-wrap justify-content-center gap-2 mb-4 p-3">
+      <label for="todo" class="btn btn-danger">Todos</label>
+      <label for="musculacion" class="btn btn-danger">Musculación</label>
+      <label for="crossfit"class="btn btn-danger">CrossFit</label>
+      <label for="yoga" class="btn btn-danger">Yoga</label>
+      <label for="spinning" class="btn btn-danger">Spinning</label>
+    </div>
+  
+    <!-- Galería -->
+    <div class="galeria p-4 m-3">
+      <img class="item musculacion" src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG11c2N1bGFjaW9ufGVufDB8fDB8fHww" alt="Imagen de Musculación">
+      <img class="item crossfit" src="https://plus.unsplash.com/premium_photo-1661301085676-71fc674b8270?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3Jvc3NmaXR8ZW58MHx8MHx8fDA%3D" alt="Imagen de CrossFit">
+      <img class="item yoga" src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D" alt="Imagen de Yoga">
+      <img class="item yoga" src="https://plus.unsplash.com/premium_photo-1663011088646-a32c7d125a67?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTYyfHx5b2dhfGVufDB8fDB8fHww" alt="Imagen de Yoga">
+      <img class="item spinning" src="https://plus.unsplash.com/premium_photo-1664109999528-c6660541202e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3Bpbm5pbmd8ZW58MHx8MHx8fDA%3D" alt="Imagen de Spinning">
+      <img class="item musculacion" src="https://plus.unsplash.com/premium_photo-1663036880678-62ae2e87c4c1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de Musculación">
+      <img class="item spinning" src="https://plus.unsplash.com/premium_photo-1726993726581-e61a01f05c45?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fFNwaW5uaW5nfGVufDB8fDB8fHww" alt="Imagen de Spinning">
+      <img class="item musculacion" src="https://images.unsplash.com/photo-1632781297772-1d68f375d878?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG11c2N1bGF0aW9ufGVufDB8fDB8fHww" alt="Imagen de Musculación">
+      <img class="item yoga" src="https://images.unsplash.com/photo-1564282350350-a8355817fd2e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njl8fHlvZ2F8ZW58MHx8MHx8fDA%3D" alt="Imagen de Yoga">
+      <img class="item crossfit" src="https://images.unsplash.com/photo-1614928228253-dc09cbc3b11c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNyb3NzZml0fGVufDB8fDB8fHww" alt="Imagen de CrossFit">
+      <img class="item spinning" src="https://plus.unsplash.com/premium_photo-1664109999752-555bf46d86e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNwaW5uaW5nfGVufDB8fDB8fHww" alt="Imagen de Spinning">
+      <img class="item crossfit" src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3Jvc3NmaXR8ZW58MHx8MHx8fDA%3D" alt="Imagen de CrossFit">
+      <img class="item spinning" src="https://images.unsplash.com/photo-1520877880798-5ee004e3f11e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8U3Bpbm5pbmd8ZW58MHx8MHx8fDA%3D" alt="Imagen de Spinning">
+      <img class="item musculacion" src="https://plus.unsplash.com/premium_photo-1661265933107-85a5dbd815af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bXVzY3VsYXRpb258ZW58MHx8MHx8fDA%3D" alt="Imagen de Musculación">
+      <img class="item yoga" src="https://images.unsplash.com/photo-1608405059861-b21a68ae76a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHlvZ2F8ZW58MHx8MHx8fDA%3D" alt="Imagen de Yoga">
+      <img class="item yoga" src="https://images.unsplash.com/photo-1591343395902-1adcb454c4e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODV8fHlvZ2F8ZW58MHx8MHx8fDA%3D" alt="Imagen de Yoga">
+      <img class="item crossfit" src="https://images.unsplash.com/photo-1609265490702-78689c867e36?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNyb3NzZml0fGVufDB8fDB8fHww" alt="Imagen de CrossFit">
+      <img class="item crossfit" src="https://plus.unsplash.com/premium_photo-1661670892906-b1cffa07584d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGNyb3NzZml0fGVufDB8fDB8fHww" alt="Imagen de CrossFit">
+      <img class="item spinning" src="https://plus.unsplash.com/premium_photo-1661838707401-957eceb25b3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNwaW5pbmd8ZW58MHx8MHx8fDA%3D" alt="Imagen de Spinning">
+    </div>
+  </section>
+
+
+    <!-- Seccion del footer -->
+    <footer class="bg-danger-subtle text-dark pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 mb-4">
+                    <h5 class="mb-3">SUSCRIBETE</h5>
+                    <form id="form-footer-contacto" class="form-footer needs-validation" novalidate>
+                        <div class="mb-2">
+                            <input type="text" class="form-control form-footer-input" id="footer-nombre"
+                                placeholder="Nombre" required>
+                            <div class="invalid-feedback">Ingrese su nombre.</div>
+                        </div>
+
+                        <div class="mb-2">
+                            <input type="email" class="form-control form-footer-input" id="footer-email"
+                                placeholder="Correo electrónico" required>
+                            <div class="invalid-feedback">Correo no válido.</div>
+                        </div>
+
+                        <div class="mb-2">
+                            <textarea class="form-control form-footer-input" id="footer-mensaje" placeholder="Mensaje"
+                                rows="3" required></textarea>
+                            <div class="invalid-feedback">Ingrese su mensaje.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger mt-2 form-footer-btn">
+                            Enviar
+                            <span id="spinner-footer" class="spinner-border spinner-border-sm d-none" role="status"
+                                aria-hidden="true"></span>
+                        </button>
+
+                        <!-- Modal personalizado -->
+                        <div class="modal fade" id="modalFooter" tabindex="-1" aria-labelledby="modalFooterLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-danger text-white rounded-4 shadow-lg border-0">
+                                    <div class="modal-header border-0">
+                                        <h5 class="modal-title" id="modalFooterLabel">¡Gracias por contactarte!</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                            aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Tu mensaje fue enviado exitosamente. Nos pondremos en contacto pronto.
+                                    </div>
+                                    <div class="modal-footer border-0">
+                                        <button type="button" class="btn btn-light"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Mapa -->
+                <div class="col-lg-6">
+                    <h5 class="mb-3">UBICACION</h5>
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2159.7793186985577!2d-65.1651055607149!3d-24.440327168769354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bad8c88072cef%3A0x80ddb48214c509ac!2sSan%20Mart%C3%ADn%2C%20Y4608%20Monterrico%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1744937215648!5m2!1ses!2sar"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+                <small>&copy; 2025 ZenFit Gym. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+
+     <!-- Seccion de scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/clases.js"></script>
+</body>
+
+</html>
